@@ -1,7 +1,0 @@
-#!/bin/sh                                                                                       
-
-APPID="org.webosinternals.enyo"
-
-echo "Intentionally not removing the Enyo framework installation"
-
-exit 0

@@ -1,6 +1,0 @@
-#!/bin/sh
-
-rm -f /usr/local/bin/mvapp
-ln -s $IPKG_OFFLINE_ROOT/usr/palm/applications/org.webosinternals.mvapp/mvapp /usr/local/bin/mvapp
-
-exit 0
