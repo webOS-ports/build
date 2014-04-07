@@ -18,10 +18,8 @@
 #
 
 APPDIRS = apps
-PTCHDIR = autopatch
 
 .PHONY: index package  upload clobber clean
-
 
 .PHONY: index
 index:  webos-ports-index \
@@ -32,7 +30,7 @@ webos-ports-patches-index:
 	echo "DUMMY"
 
 .PHONY: webos-ports-index
-webos-ports-index: ipkgs/webos-ports/all/Packages ipkgs/webos-ports/i686/Packages ipkgs/webos-ports/armv6/Packages ipkgs/webos-ports/armv7/Packages	
+webos-ports-index: ipkgs/webos-ports/all/Packages
 
 ipkgs/webos-ports/%/Packages: package-appdirs
 	rm -rf ipkgs/webos-ports/$*
@@ -71,10 +69,7 @@ package-appdirs:
 	done
 
 upload:
-	-rsync -avr ipkgs/ preware@ipkg4.preware.org:/home/preware/htdocs/ipkg/feeds/
-	#-rsync -avr ipkgs/ preware@ipkg3.preware.org:/home/preware/htdocs/ipkg/feeds/
-	-rsync -avr ipkgs/ preware@ipkg2.preware.org:/home/preware/htdocs/ipkg/feeds/
-	-rsync -avr ipkgs/ preware@ipkg1.preware.org:/home/preware/htdocs/ipkg/feeds/
+	-rsync -avr ipkgs/ ports@milla.nas-admin.org:/home/ports/htdocs/ipkg/feeds/
 
 .PHONY: alpha alpha-apps
 alpha: alpha-apps
@@ -83,10 +78,7 @@ alpha-apps:
 	${MAKE} APPDIRS="alpha-apps" FEED="WebOS Ports Alpha" webos-ports-index
 
 alpha-upload:
-	-rsync -avr ipkgs/webos-ports/ preware@ipkg4.preware.org:/home/preware/htdocs/ipkg/alpha/apps/
-	#-rsync -avr ipkgs/webos-ports/ preware@ipkg3.preware.org:/home/preware/htdocs/ipkg/alpha/apps/
-	-rsync -avr ipkgs/webos-ports/ preware@ipkg2.preware.org:/home/preware/htdocs/ipkg/alpha/apps/
-	-rsync -avr ipkgs/webos-ports/ preware@ipkg1.preware.org:/home/preware/htdocs/ipkg/alpha/apps/
+	-rsync -avr ipkgs/webos-ports/ ports@milla.nas-admin.org:/home/ports/htdocs/ipkg/alpha/apps/
 
 .PHONY: beta beta-apps
 beta: beta-apps
@@ -95,10 +87,7 @@ beta-apps:
 	${MAKE} APPDIRS="beta-apps" FEED="WebOS Ports Beta" webos-ports-index
 
 beta-upload:
-	-rsync -avr ipkgs/webos-ports/ preware@ipkg4.preware.org:/home/preware/htdocs/ipkg/beta/apps/
-	#-rsync -avr ipkgs/webos-ports/ preware@ipkg3.preware.org:/home/preware/htdocs/ipkg/beta/apps/
-	-rsync -avr ipkgs/webos-ports/ preware@ipkg2.preware.org:/home/preware/htdocs/ipkg/beta/apps/
-	-rsync -avr ipkgs/webos-ports/ preware@ipkg1.preware.org:/home/preware/htdocs/ipkg/beta/apps/
+	-rsync -avr ipkgs/webos-ports/ ports@milla.nas-admin.org:/home/ports/htdocs/ipkg/beta/apps/
 
 distclean: clobber
 	find toolchain -mindepth 1 -maxdepth 1 -type d -print | \
