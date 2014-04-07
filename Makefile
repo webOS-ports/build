@@ -17,6 +17,7 @@
 # Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
 #
 
+UPLOAD_USER = ports
 APPDIRS = apps
 
 .PHONY: index package  upload clobber clean
@@ -69,7 +70,7 @@ package-appdirs:
 	done
 
 upload:
-	-rsync -avr ipkgs/ ports@milla.nas-admin.org:/home/ports/htdocs/ipkg/feeds/
+	-rsync -avr ipkgs/ ${UPLOAD_USER}@milla.nas-admin.org:/home/ports/htdocs/feeds/
 
 .PHONY: alpha alpha-apps
 alpha: alpha-apps
@@ -78,7 +79,7 @@ alpha-apps:
 	${MAKE} APPDIRS="alpha-apps" FEED="WebOS Ports Alpha" webos-ports-index
 
 alpha-upload:
-	-rsync -avr ipkgs/webos-ports/ ports@milla.nas-admin.org:/home/ports/htdocs/ipkg/alpha/apps/
+	-rsync -avr ipkgs/webos-ports/ ${UPLOAD_USER}@milla.nas-admin.org:/home/ports/htdocs/alpha/apps/
 
 .PHONY: beta beta-apps
 beta: beta-apps
@@ -87,7 +88,7 @@ beta-apps:
 	${MAKE} APPDIRS="beta-apps" FEED="WebOS Ports Beta" webos-ports-index
 
 beta-upload:
-	-rsync -avr ipkgs/webos-ports/ ports@milla.nas-admin.org:/home/ports/htdocs/ipkg/beta/apps/
+	-rsync -avr ipkgs/webos-ports/ ${UPLOAD_USER}@milla.nas-admin.org:/home/ports/htdocs/beta/apps/
 
 distclean: clobber
 	find toolchain -mindepth 1 -maxdepth 1 -type d -print | \
