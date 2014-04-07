@@ -72,24 +72,6 @@ package-appdirs:
 upload:
 	-rsync -avr ipkgs/ ${UPLOAD_USER}@milla.nas-admin.org:/home/jenkins/htdocs/feeds/
 
-.PHONY: alpha alpha-apps
-alpha: alpha-apps
-
-alpha-apps:
-	${MAKE} APPDIRS="alpha-apps" FEED="WebOS Ports Alpha" webos-ports-index
-
-alpha-upload:
-	-rsync -avr ipkgs/webos-ports/ ${UPLOAD_USER}@milla.nas-admin.org:/home/jenkins/htdocs/alpha/apps/
-
-.PHONY: beta beta-apps
-beta: beta-apps
-
-beta-apps:
-	${MAKE} APPDIRS="beta-apps" FEED="WebOS Ports Beta" webos-ports-index
-
-beta-upload:
-	-rsync -avr ipkgs/webos-ports/ ${UPLOAD_USER}@milla.nas-admin.org:/home/jenkins/htdocs/beta/apps/
-
 distclean: clobber
 	find toolchain -mindepth 1 -maxdepth 1 -type d -print | \
 	xargs -I % ${MAKE} -C % clobber
@@ -97,20 +79,8 @@ distclean: clobber
 clobber: clean clobber-appdirs
 	rm -rf ipkgs
 
-alpha-clobber:
-	${MAKE} APPDIRS="alpha-apps" clobber
-
-beta-clobber:
-	${MAKE} APPDIRS="beta-apps" clobber
-
 clean: clean-appdirs
 	find . -name "*~" -delete
-
-alpha-clean:
-	${MAKE} APPDIRS="alpha-apps" clean
-
-beta-clean:
-	${MAKE} APPDIRS="beta-apps" clean
 
 clobber-appdirs:
 	find ${APPDIRS} -mindepth 1 -maxdepth 1 -type d -print | \
