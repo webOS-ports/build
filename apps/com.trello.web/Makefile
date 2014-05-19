@@ -1,12 +1,12 @@
-NAME = twitter-web
-TITLE = Twitter web application
-APP_ID = com.twitter.web
+NAME = trello-web
+TITLE = Trello web application
+APP_ID = com.trello.web
 VERSION = 1.0.0
 TYPE = Application
 CATEGORY = Social Networking
 HOMEPAGE = https://github.com/webOS-ports/web-apps
-ICON = https://raw.githubusercontent.com/webOS-ports/web-apps/master/com.twitter.web/icon.png
-DESCRIPTION = Twitter mobile website packaged as webOS application
+ICON = https://raw.githubusercontent.com/webOS-ports/web-apps/master/com.trello.web/icon.png
+DESCRIPTION = Trello website packaged as webOS application
 CHANGELOG = \
     1.0.0: Initial public release.
 

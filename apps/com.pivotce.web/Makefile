@@ -1,12 +1,12 @@
-NAME = twitter-web
-TITLE = Twitter web application
-APP_ID = com.twitter.web
+NAME = pivotce-web
+TITLE = PivotCE web application
+APP_ID = com.pivotce.web
 VERSION = 1.0.0
 TYPE = Application
-CATEGORY = Social Networking
+CATEGORY = News
 HOMEPAGE = https://github.com/webOS-ports/web-apps
-ICON = https://raw.githubusercontent.com/webOS-ports/web-apps/master/com.twitter.web/icon.png
-DESCRIPTION = Twitter mobile website packaged as webOS application
+ICON = https://raw.githubusercontent.com/webOS-ports/web-apps/master/com.pivotce.web/icon.png
+DESCRIPTION = PivotCE website packaged as webOS application
 CHANGELOG = \
     1.0.0: Initial public release.
 

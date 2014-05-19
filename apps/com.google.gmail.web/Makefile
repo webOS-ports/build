@@ -1,12 +1,12 @@
-NAME = twitter-web
-TITLE = Twitter web application
-APP_ID = com.twitter.web
+NAME = google-gmail-web
+TITLE = GMail web application
+APP_ID = com.google.gmail.web
 VERSION = 1.0.0
 TYPE = Application
-CATEGORY = Social Networking
+CATEGORY = Productivity
 HOMEPAGE = https://github.com/webOS-ports/web-apps
-ICON = https://raw.githubusercontent.com/webOS-ports/web-apps/master/com.twitter.web/icon.png
-DESCRIPTION = Twitter mobile website packaged as webOS application
+ICON = https://raw.githubusercontent.com/webOS-ports/web-apps/master/com.google.gmail.web/icon.png
+DESCRIPTION = GMail website packaged as webOS application
 CHANGELOG = \
     1.0.0: Initial public release.
 
