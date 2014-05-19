@@ -1,7 +1,7 @@
 NAME = google-maps-web
 TITLE = Google Maps web application
 APP_ID = com.google.maps.web
-VERSION = 1.0.0
+VERSION = 1.1.0
 TYPE = Application
 CATEGORY = Location And Travel
 HOMEPAGE = https://github.com/webOS-ports/web-apps

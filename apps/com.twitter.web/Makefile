@@ -1,7 +1,7 @@
 NAME = twitter-web
 TITLE = Twitter web application
 APP_ID = com.twitter.web
-VERSION = 1.0.0
+VERSION = 1.1.0
 TYPE = Application
 CATEGORY = Social Networking
 HOMEPAGE = https://github.com/webOS-ports/web-apps

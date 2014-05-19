@@ -1,7 +1,7 @@
 NAME = google-youtube-web
 TITLE = Google YouTube web application
 APP_ID = com.google.youtube.web
-VERSION = 1.0.0
+VERSION = 1.1.0
 TYPE = Application
 CATEGORY = Entertainment
 HOMEPAGE = https://github.com/webOS-ports/web-apps

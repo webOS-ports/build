@@ -1,7 +1,7 @@
 NAME = pivotce-web
 TITLE = PivotCE web application
 APP_ID = com.pivotce.web
-VERSION = 1.0.0
+VERSION = 1.1.0
 TYPE = Application
 CATEGORY = News
 HOMEPAGE = https://github.com/webOS-ports/web-apps

@@ -1,7 +1,7 @@
 NAME = google-gmail-web
 TITLE = GMail web application
 APP_ID = com.google.gmail.web
-VERSION = 1.0.0
+VERSION = 1.1.0
 TYPE = Application
 CATEGORY = Productivity
 HOMEPAGE = https://github.com/webOS-ports/web-apps
