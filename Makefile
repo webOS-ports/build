@@ -70,7 +70,7 @@ package-appdirs:
 	done
 
 upload:
-	-rsync -avr ipkgs/ ${UPLOAD_USER}@milla.nas-admin.org:/home/jenkins/htdocs/feeds/
+	-rsync -avr ipkgs/ ${UPLOAD_USER}@milla.nas-admin.org:/home5/jenkins/htdocs/feeds/
 
 distclean: clobber
 	find toolchain -mindepth 1 -maxdepth 1 -type d -print | \
